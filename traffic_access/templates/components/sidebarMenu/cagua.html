@@ -1,0 +1,45 @@
+<a
+  href="#cagua"
+  class="bg-transparent btn btn-primary text-left rounded-0 btn-block list-group-item d-inline-block collapsed"
+  data-toggle="collapse"
+  aria-expanded="false"
+>
+  <span class="d-none d-md-inline">Cagua</span></a
+>
+<div class="collapse" id="cagua" data-parent="#sidebar">
+  <a
+    href="{{ url_for('trends.index', city='Cagua', company='all') }}"
+    class="bg-light text-primary list-group-item"
+    data-parent="#border"
+    >&nbsp;<i class="fa fa-plus"></i>
+    <span class="d-none d-md-inline">All</span></a
+  >
+  <a
+    href="{{ url_for('trends.index', city='Cagua', company='google') }}"
+    class="bg-light text-primary list-group-item"
+    data-parent="#border"
+    >&nbsp;<i class="fa fa-google"></i>
+    <span class="d-none d-md-inline">Google</span></a
+  >
+  <a
+    href="{{ url_for('trends.index', city='Cagua', company='facebook') }}"
+    class="bg-light text-primary list-group-item"
+    data-parent="#border"
+    >&nbsp;<i class="fa fa-facebook"></i>
+    <span class="d-none d-md-inline">Facebook</span></a
+  >
+  <a
+    href="{{ url_for('trends.index', city='Cagua', company='microsoft') }}"
+    class="bg-light text-primary list-group-item"
+    data-parent="#border"
+    >&nbsp;<i class="fa fa-windows"></i>
+    <span class="d-none d-md-inline">Microsoft</span></a
+  >
+  <a
+    href="{{ url_for('trends.index', city='Cagua', company='others') }}"
+    class="bg-light text-primary list-group-item"
+    data-parent="#border"
+    >&nbsp;<i class="fa fa-server"></i>
+    <span class="d-none d-md-inline">Others</span></a
+  >
+</div>

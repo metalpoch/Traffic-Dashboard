@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="wrapper">
+  <nav id="sidebar">
+    <ul class="lisst-unstyled components">
+      {% include 'components/sidebarMenu/barcelona.html' %}
+      {% include 'components/sidebarMenu/barquisimeto.html' %}
+      {% include 'components/sidebarMenu/cagua.html' %}
+      {% include 'components/sidebarMenu/caracas.html' %}
+      {% include 'components/sidebarMenu/guarenas.html' %}
+      {% include 'components/sidebarMenu/maracaibo.html' %}
+      {% include 'components/sidebarMenu/maracay.html' %}
+      {% include 'components/sidebarMenu/porlamar.html' %}
+      {% include 'components/sidebarMenu/puerto-cabello.html' %}
+      {% include 'components/sidebarMenu/turmero.html' %}
+      <li class="active"></li>
+    </ul>
+  </nav>
+  <div class="container-fluid pl-1 pt-2 mx-0">
+    <a id="sidebarCollapse" class="text-light">
+      <i class="fas fa-bars"></i> Menu
+    </a>
+    <a
+      href="{{ url_for('trends.clean_sessions') }}"
+      id="sidebarCollapse"
+      class="pl-2 text-light"
+    >
+      <i class="fas fa-brush"></i> Clean
+    </a>
+    <!-- Main Content Here -->
+    <div class="container pt-3">
+      {% include 'components/dataFrame/form.html' %}
+      <div class="row my-4">
+        <div class="container bg-semidark rounded">
+          {% include 'components/dataFrame/chart.html' %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="rounded df-table">
+          {% if column_names %}
+          <a
+            class="btn btn-info float-right mb-1"
+            href="{{ url_for('trends.download') }}"
+            >Descargar <i class="fas fa-file-download"></i
+          ></a>
+          {% include 'components/dataFrame/table.html' %}
+	  {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+{% block footer %}
+<script>
+  $(document).ready(function () {
+    $("#sidebarCollapse").on("click", function () {
+      $("#sidebar").toggleClass("active");
+    });
+  });
+</script>
+{% endblock %}

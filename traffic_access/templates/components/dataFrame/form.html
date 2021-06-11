@@ -1,0 +1,28 @@
+<form action="{{ url_for('trends.index') }}" class="container text-center">
+  <div class="row">
+    <div class="offset-sm-2 col-sm-3">
+      <input
+        type="date"
+        name="firstday"
+        class="form-control form-control-sm"
+        value="{{ firstday }}"
+      />
+    </div>
+    <div class="col-sm-3">
+      <input
+        type="date"
+        name="lastday"
+        class="form-control form-control-sm"
+        value="{{ lastday }}"
+      />
+    </div>
+    <div class="col-sm-2">
+      <input
+        type="submit"
+        class="btn btn-primary btn-block btn-sm"
+        value="Buscar"
+      />
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</form>

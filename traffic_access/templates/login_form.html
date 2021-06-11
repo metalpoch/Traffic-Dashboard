@@ -1,0 +1,84 @@
+{% extends 'base.html' %} {% block head %} {{ super() }} <link rel="stylesheet"
+type=text/css media="screen" href="{{ url_for('static', filename='css/login_form.css')
+
+}}" > {% endblock %} {% block content %}
+<main role="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-2"></div>
+      <div class="col-lg-6 col-md-8 login-box">
+        <div class="col-lg-12 login-key pt-3">
+          <i class="fa fa-user-lock" aria-hidden="true"></i>
+        </div>
+        <div class="col-lg-12 login-title">LOGIN</div>
+        {% with messages = get_flashed_messages() %} {% if messages %} {% for
+        message in messages %}
+        <div
+          class="alert alert-danger alert-dismissible text-center mr-5 ml-5"
+          role="alert"
+        >
+          <button
+            type="button"
+            class="close"
+            data-dismiss="alert"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">×</span>
+          </button>
+          {{ message }}
+        </div>
+        {% endfor %} {% endif %} {% endwith %}
+        <div class="col-lg-12 login-form">
+          <div class="col-lg-12 login-form">
+            <form action="{{ url_for('auth.login') }}" method="POST">
+              <div class="form-group">
+                <input
+                  type="hidden"
+                  name="next"
+                  value="{{ request.args.get('next') }}"
+                />
+                <label class="form-control-label">EMAIL</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  name="email"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-control-label">PASSWORD</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  name="password"
+                  required
+                  minlength="8"
+                />
+              </div>
+              <div class="col-lg-12 loginbttm">
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    name="remember"
+                    type="checkbox"
+                    value="remember"
+                    id="flexCheckDefault"
+                  />
+                  <label class="form-check-label" for="flexCheckDefault">
+                    Recuerdame
+                  </label>
+                </div>
+                <div class="float-right login-btm login-button">
+                  <button type="submit" class="btn btn-outline-primary">
+                    SUBMIT
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock %}

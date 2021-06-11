@@ -1,0 +1,10 @@
+<!-- Plotly -->
+  <script src='{{ url_for('static', filename='js/plotly-latest.min.js') }}'></script>
+  <div id="linegraph" class="chart">
+    <script>
+      let graphs = {{ graph_json | safe }};
+      Plotly.plot('linegraph', graphs, {});
+    </script>
+  </div>
+<!-- Plotly -->
+
