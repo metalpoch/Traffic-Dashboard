@@ -128,9 +128,9 @@ def chart_trend(data, city: str, company: str):
                                  line=dict(width=3)))
         del filter_data
 
-    fig.update_layout(yaxis_title="Consumo",
+    fig.update_layout(yaxis_title="Traffic",
                       yaxis_tickformat='s',
-                      xaxis={'title': 'Fecha',
+                      xaxis={'title': 'Date',
                              'visible': True,
                              'showticklabels': True},
                       title=f"{company} apps in {city}",
