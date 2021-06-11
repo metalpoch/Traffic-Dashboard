@@ -4,6 +4,8 @@
 
 visualize the trends of the most used applications in some important cities of Venezuela as a network administrator in a telecommunications company (the measurements stored and displayed in this app are not real).
 
+![Screenshot](Screenshot_2021-06-11 TrafficAccess.png)
+
 ## Installation
 
 ##### Clone this repository [GitHub](https://github.com/metalpoch/Traffic-Access-Dashboard#) and create a virtual environment
