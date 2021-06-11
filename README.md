@@ -16,7 +16,7 @@ source venv/bin/activate
 
 ##### Use [pip](https://pip.pypa.io/en/stable/) to install the modules in the file requirement.txt 
 ```bash
-pip install -r requeriments.txt
+pip install -r requiriments.txt
 ```
 
 ## Use
