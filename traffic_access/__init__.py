@@ -27,12 +27,6 @@ login_manager = LoginManager()
 login_manager.login_view = "auth.login"
 login_manager.login_message = ""
 
-login_manager.refresh_view = "auth.login"
-login_manager.needs_refresh_message = (
-    u"Para proteger su cuenta, por favor autentifiquese nuevamente.")
-login_manager.needs_refresh_message_category = "info"
-
-
 login_manager.init_app(app)
 
 from .models import User
