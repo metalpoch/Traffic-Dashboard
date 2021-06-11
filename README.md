@@ -4,7 +4,7 @@
 
 visualize the trends of the most used applications in some important cities of Venezuela as a network administrator in a telecommunications company (the measurements stored and displayed in this app are not real).
 
-![Screenshot](Screenshot_2021-06-11 TrafficAccess.png)
+![alt text](https://raw.githubusercontent.com/metalpoch/Traffic-Access-Dashboard/main/Screenshot_2021-06-11%20TrafficAccess.png)
 
 ## Installation
 
