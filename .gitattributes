@@ -1,1 +1,2 @@
-traffic_access/templates/components/* linguist-detectable=false
+traffic_access/templates/components/sidebarMenu/*.html linguist-detectable=false
+traffic_access/templates/components/dataFrame/*.html linguist-detectable=false
